@@ -9,7 +9,7 @@ public abstract Ball
 		location = new Point(x,y);
 	}
 	
-	public in getX()
+	public int getX()
 	{
 		return location.x;
 	}
