@@ -56,7 +56,11 @@ public class BVector
 	}
 	public float mag()
 	{
-		//To do :/
+		return Math.sqrt(x*x + y*y);
+	}
+	public float magsq()
+	{
+		return mag()*mag();
 	}
 	public float distance(BVector other)
 	{
