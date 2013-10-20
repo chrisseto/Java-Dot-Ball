@@ -6,7 +6,7 @@ import java.Math;
 
 public class BVector
 {
-	private int x,y;
+	public int x,y;  //This maybe be changed later on
 	
 	public BVector(int x, int y)
 	{
@@ -18,16 +18,6 @@ public class BVector
 	{
 		this(0,0);
 	}	
-	
-	public int getX()
-	{
-		return x;
-	}
-
-	public int getY()
-	{
-		return y;
-	}
 
 	public void add(BVector other)
 	{
