@@ -4,16 +4,16 @@ Java-Dot-Ball
 Class Hierarchy for a future game
 
 
-# Abstract Class Ball
+### Abstract Class Ball
 * Position
 * Size
 * Speed
 * Draw method
 
 
-# Class Player extends Ball
+### Class Player extends Ball
 * Handles input
 
 
-# Class EnemyBall extends Ball
+### Class EnemyBall extends Ball
 * Flocking algorithm
