@@ -4,9 +4,12 @@ public abstract Ball
 {
 	private BVector location;
 	private int size;
-	Ball(int x, int y, int size)
+	private Color color;
+	Ball(int x, int y, int size, Color color)
 	{
 		location = new Point(x,y);
+		this.size = size;
+		this.color = color;
 	}
 	
 	public int getX()
