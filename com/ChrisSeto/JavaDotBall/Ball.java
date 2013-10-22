@@ -7,7 +7,6 @@ public abstract class Ball
 	private BVector position, velocity;
 	private double size;
 	private Color color;
-	//private Bitmap bitmap; //This should always be loaded from the child class
 	Ball(double x, double y, double size, Color color)
 	{
 		setPosition(new BVector(x,y));
@@ -17,12 +16,12 @@ public abstract class Ball
 	
 	public double getX()
 	{
-		return getPosition().x;
+		return position.x;
 	}
 	
 	public double getY()
 	{
-		return getPosition().y;
+		return position.y;
 	}
 
 	public boolean checkCollision(Ball other)
@@ -32,24 +31,25 @@ public abstract class Ball
 
 	public void update()
 	{
-		getPosition().add(velocity);
+		position.add(velocity);
 		checkBoundaryCollition();
 	}
 	
-	void checkBoundaryCollition() //I'm broken still :[
+	void checkBoundaryCollition()
 	{
-		if (getPosition().x > Assets.WIDTH-size/2)
-			getPosition().x = Assets.WIDTH-size/2;
-		if (getPosition().x <size/2)
-			getPosition().x = size/2;
-		if (getPosition().y > Assets.HEIGHT-size/2)
-			getPosition().y = Assets.HEIGHT-size/2;
-		if (getPosition().y< size/2)
-			getPosition().y =size/2;
+		if (position.x > Assets.WIDTH-size/2)
+			position.x = Assets.WIDTH-size/2;
+		if (position.x <size/2)
+			position.x = size/2;
+		if (position.y > Assets.HEIGHT-size/2)
+			position.y = Assets.HEIGHT-size/2;
+		if (position.y< size/2)
+			position.y =size/2;
 	}
-	public void draw() //I dunno what args this needs lol
+	public void draw() //I dunno what args this needs lol canvas graphics?
 	{
-		//Draw bitmap here
+		//Draw circle with color color
+		//Override to paint bitmap
 	}
 
 	public BVector getPosition() {
