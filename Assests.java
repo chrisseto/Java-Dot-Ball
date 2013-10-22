@@ -9,3 +9,16 @@ public class Assets
 	public static final int PLAYERSIZE = 20;
 	public static final int ENEMYSIZE = 12;
 }
+public enum Effect
+{
+  KILL,
+  Freeze,
+  Shock,
+  Statis
+}
+public enum PowerUpType
+{
+  Blast,
+  Spike,
+  Shield
+}
