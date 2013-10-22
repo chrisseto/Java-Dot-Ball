@@ -56,4 +56,10 @@ public class BVector
 	{
 		return Math.sqrt((this.x-other.x)*(this.x-other.x) + (this.y-other.y)*(this.y-other.y));
 	}
+	public void normalize()
+	{
+		float mag = this.mag();
+		this.x/= mag;
+		this.y/= mag;
+	}
 }
