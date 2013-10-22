@@ -10,19 +10,19 @@ public abstract class Ball
 	private Bitmap bitmap; //This should always be loaded from the child class
 	Ball(int x, int y, int size, Color color)
 	{
-		position = new Point(x,y);
+		position = new BVector(x,y);
 		this.size = size;
 		this.color = color;
 	}
 	
 	public int getX()
 	{
-		return position.x;
+		return (int) position.x;
 	}
 	
 	public int getY()
 	{
-		return position.y;
+		return (int) position.y;
 	}
 
 	public boolean checkCollision(Ball other)

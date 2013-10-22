@@ -1,9 +1,5 @@
 package com.ChrisSeto.JavaDotBall;
 
-//BVector is meant to be a clone of processings PVector
-//Might need to change ints to doubles....
-import java.math.*;
-
 public class BVector
 {
 	public double x,y;  //This maybe be changed later on

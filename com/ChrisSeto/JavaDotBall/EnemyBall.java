@@ -5,7 +5,7 @@ public class EnemyBall extends Ball
 {
 	public EnemyBall(int x, int y)
 	{
-		super(x,y,Assests.ENEMYSIZE);
+		super(x,y,Assets.ENEMYSIZE);
 		bitmap = loadBitMap(Assets.ENEMYBITMAP);
 	}
 	public void die()
