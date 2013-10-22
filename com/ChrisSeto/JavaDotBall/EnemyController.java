@@ -68,10 +68,10 @@ public class EnemyController {
 	void generateEnemies() {
 		if (spawnNext.checkDone()) {
 			// TODO add random shape spawns after 30~ seconds
-			int runningTime = System.currentTimeMillis() / 1000;
-			float time1 = (30 / (runningTime + 1)) + 1;
-			float time2 = (10 / (runningTime + 1));
-			spawnNext = new Timer(random(time2, time1));
+			double runningTime = System.currentTimeMillis() / 1000;
+			double time1 = (30 / (runningTime + 1)) + 1;
+			double time2 = (10 / (runningTime + 1));
+			spawnNext = new Timer(Assets.random(time2, time1));
 			reds.add(new EnemyBall(Assets.random(0, Assets.WIDTH), Assets.random(0, Assets.HEIGHT)));
 			System.out.println("New Enemy spawned at "
 					+ reds.get(reds.size() - 1).position);

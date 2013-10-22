@@ -11,9 +11,9 @@ public class Assets {
 	public static final int PLAYERSIZE = 20;
 	public static final int ENEMYSIZE = 12;
 	public static final int POWERUPSIZE = 19;
-	public static int random(int lower, int upper)
+	public static double random(double lower, double upper)
 	{
-		return new Random().nextInt(upper) + lower;
+		return new Random().nextDouble() * upper + lower;
 	}
 	public enum Effect {
 		Kill, Freeze, Shock, Statis

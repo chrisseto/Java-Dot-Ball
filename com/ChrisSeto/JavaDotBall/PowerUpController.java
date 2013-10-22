@@ -1,5 +1,7 @@
 package com.ChrisSeto.JavaDotBall;
 
+import java.util.ArrayList;
+
 
 public class PowerUpController
 {
@@ -14,7 +16,7 @@ public class PowerUpController
 		activePowerUps = new ArrayList<PowerUpField>();
 		powerUpProjectiles = new ArrayList<PowerUpProjectile>();
 		playerMods = new ArrayList<PlayerMod>();
-		spawnCounter= new Timer(random(1, 5));
+		spawnCounter= new Timer(Assets.random(1, 5));
 	}
 	void checkPlayerCollision(PlayerBall player) //This shit needs to be cleaned up
 	{
@@ -79,12 +81,12 @@ TopLoop: switch(dormantPowerUps.get(i).type)
 		if (spawnCounter.checkDone()&&dormantPowerUps.size()<=5)
 		{
 			dormantPowerUps.add(new PowerUp());
-			spawnCounter = new Timer(random(0, (60/((millis()/1000)+9)+3)));
+			spawnCounter = new Timer(Assets.random(0, (60/((System.currentTimeMillis()/1000)+9)+3)));
 			System.out.println("new PowerUp spawned at point " + dormantPowerUps.get(dormantPowerUps.size()-1).position);
 			System.out.println("Next spawn in " + spawnCounter.life + " seconds");
 		}
 	}
-	void updatePlayerMods(PVector player)
+	void updatePlayerMods(BVector player)
 	{
 		for (int i = 0; i < playerMods.size(); i++)
 		{

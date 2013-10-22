@@ -5,7 +5,7 @@ import java.awt.Color;
 
 public class EnemyBall extends Ball
 {
-	public EnemyBall(int x, int y)
+	public EnemyBall(double x, double y)
 	{
 		super(x,y,Assets.ENEMYSIZE,Color.RED);
 		//bitmap = loadBitMap(Assets.ENEMYBITMAP);

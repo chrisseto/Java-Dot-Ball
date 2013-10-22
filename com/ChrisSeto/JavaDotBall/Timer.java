@@ -6,8 +6,8 @@ package com.ChrisSeto.JavaDotBall;
 public class Timer
 {
 	long time;
-	float life;
-	public Timer(float time) //Should be in seconds
+	double life;
+	public Timer(double time) //Should be in seconds
 	{
 		life = time * 1000; //Time -> millisecs
 		time = System.currentTimeMillis();
