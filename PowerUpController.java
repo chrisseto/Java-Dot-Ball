@@ -1,4 +1,6 @@
-class PowerUpController
+package com.ChrisSeto.JavaDotBall;
+
+public class PowerUpController
 {
 	ArrayList<PowerUp> dormantPowerUps;
 	ArrayList<PowerUpField> activePowerUps;
@@ -13,7 +15,7 @@ class PowerUpController
 		playerMods = new ArrayList<PlayerMod>();
 		spawnCounter= new Timer(random(1, 5));
 	}
-	void checkPlayerCollision(PlayerBall player)
+	void checkPlayerCollision(PlayerBall player) //This shit needs to be cleaned up
 	{
 		for ( int i = 0; i < dormantPowerUps.size(); i++)
 		{

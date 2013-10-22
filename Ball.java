@@ -5,6 +5,7 @@ public abstract Ball
 	private BVector location;
 	private int size;
 	private Color color;
+	private Bitmap bitmap; //This should always be loaded from the child class
 	Ball(int x, int y, int size, Color color)
 	{
 		location = new Point(x,y);
@@ -43,5 +44,9 @@ public abstract Ball
 			position.y = height-size/2;
 		if (position.y< size/2)
 			position.y =size/2;
+	}
+	public void draw() //I dunno what args this needs lol
+	{
+		//Draw bitmap here
 	}
 }
