@@ -1,9 +1,12 @@
-package com.ChrisSeto.JavaDotBall
+package com.ChrisSeto.JavaDotBall;
+
+import java.awt.Color;
 
 public class Player extends Ball
 {
 	public Player()
 	{
+		super(Assets.WIDTH/2,Assets.HEIGHT/2,Assets.PLAYERSIZE,Color.BLUE);
 		//init position will always be in the middle of the screen
 	}	
 	
