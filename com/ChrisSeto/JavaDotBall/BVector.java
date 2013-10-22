@@ -1,5 +1,7 @@
 package com.ChrisSeto.JavaDotBall;
 
+import java.text.DecimalFormat;
+
 public class BVector
 {
 	public double x,y;  //This maybe be changed later on
@@ -66,5 +68,10 @@ public class BVector
 		BVector BV = position.get();
 		BV.sub(position2);
 		return BV;
+	}
+	public String toString() 
+	{
+			DecimalFormat f = new DecimalFormat();
+			return "(" + f.format(x) + ", " + f.format(y) +")";
 	}
 }
