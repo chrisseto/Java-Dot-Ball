@@ -1,4 +1,5 @@
-package com.ChrisSeto.JavaDotBall
+package com.ChrisSeto.JavaDotBall;
+
 
 public class EnemyBall extends Ball
 {

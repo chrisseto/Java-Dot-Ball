@@ -1,3 +1,4 @@
+package com.ChrisSeto.JavaDotBall;
 class PowerUp extends Ball
 {
   Timer life;

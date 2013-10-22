@@ -1,4 +1,4 @@
-package com.ChrisSeto.JavaDotBall
+package com.ChrisSeto.JavaDotBall;
 
 //This class is purely for resources and what not
 

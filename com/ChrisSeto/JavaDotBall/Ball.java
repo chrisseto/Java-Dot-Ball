@@ -1,31 +1,33 @@
-package com.ChrisSeto.JavaDotBall
+package com.ChrisSeto.JavaDotBall;
 
-public abstract Ball
+import java.awt.Color;
+
+public abstract class Ball
 {
-	private BVector location;
+	private BVector position, velocity;
 	private int size;
 	private Color color;
 	private Bitmap bitmap; //This should always be loaded from the child class
 	Ball(int x, int y, int size, Color color)
 	{
-		location = new Point(x,y);
+		position = new Point(x,y);
 		this.size = size;
 		this.color = color;
 	}
 	
 	public int getX()
 	{
-		return location.x;
+		return position.x;
 	}
 	
 	public int getY()
 	{
-		return location.y;
+		return position.y;
 	}
 
 	public boolean checkCollision(Ball other)
   	{
-    		return(PVector.sub(other.position,position).magSq() <= ((size+other.size)/2)*((size+other.size)/2));  
+    		return(BVector.sub(other.position,position).magSq() <= ((size+other.size)/2)*((size+other.size)/2));  
   	}
 
 	void update()

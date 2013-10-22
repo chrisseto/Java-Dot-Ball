@@ -1,5 +1,6 @@
 package com.ChrisSeto.JavaDotBall;
 
+
 public class PowerUpController
 {
 	ArrayList<PowerUp> dormantPowerUps;

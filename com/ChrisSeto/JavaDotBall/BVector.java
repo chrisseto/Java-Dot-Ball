@@ -1,14 +1,14 @@
-package com.ChrisSeto.JavaDotBall
+package com.ChrisSeto.JavaDotBall;
 
 //BVector is meant to be a clone of processings PVector
-//Might need to change ints to floats....
-import java.Math;
+//Might need to change ints to doubles....
+import java.math.*;
 
 public class BVector
 {
-	public int x,y;  //This maybe be changed later on
+	public double x,y;  //This maybe be changed later on
 	
-	public BVector(int x, int y)
+	public BVector(double x, double y)
 	{
 		this.x = x;
 		this.y = y;
@@ -21,14 +21,14 @@ public class BVector
 
 	public void add(BVector other)
 	{
-		this.x += other.getX();
-		this.y += other.getY();
+		this.x += other.x;
+		this.y += other.y;
 	}
 
 	public void sub(BVector other)
 	{
-		this.x -= other.getX();
-		this.y -= other.getY();
+		this.x -= other.x;
+		this.y -= other.y;
 	}
 	public void set(int x, int y)
 	{
@@ -40,25 +40,25 @@ public class BVector
 		this.x *= scalar;
 		this.y *= scalar;
 	}
-	public static BVector fromAngle(float angle)
+	public static BVector fromAngle(double angle)
 	{
-		return BVector(Math.Cos(angle),Math.Sin(angle));	
+		return new BVector(Math.cos(angle),Math.sin(angle));	
 	}
-	public float mag()
+	public double mag()
 	{
 		return Math.sqrt(x*x + y*y);
 	}
-	public float magsq()
+	public double magsq()
 	{
 		return mag()*mag();
 	}
-	public float distance(BVector other)
+	public double distance(BVector other)
 	{
 		return Math.sqrt((this.x-other.x)*(this.x-other.x) + (this.y-other.y)*(this.y-other.y));
 	}
 	public void normalize()
 	{
-		float mag = this.mag();
+		double mag = this.mag();
 		this.x/= mag;
 		this.y/= mag;
 	}

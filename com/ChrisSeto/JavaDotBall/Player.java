@@ -1,4 +1,4 @@
-package com.ChrisSeto.BallDotJava
+package com.ChrisSeto.JavaDotBall
 
 public class Player extends Ball
 {
