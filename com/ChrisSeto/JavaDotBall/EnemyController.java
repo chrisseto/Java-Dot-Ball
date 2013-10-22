@@ -83,7 +83,7 @@ public class EnemyController {
 			float time1 = (30 / (runningTime + 1)) + 1;
 			float time2 = (10 / (runningTime + 1));
 			spawnNext = new Timer(random(time2, time1));
-			reds.add(new EnemyBall(random(0, width), random(0, height)));
+			reds.add(new EnemyBall(Assets.random(0, Assets.WIDTH), Assets.random(0, Assets.HEIGHT)));
 			System.out.println("New Enemy spawned at "
 					+ reds.get(reds.size() - 1).position);
 			System.out.println("Next Spawn in " + spawnNext.life + " seconds");
