@@ -7,7 +7,7 @@ public abstract class Ball
 	private BVector position, velocity;
 	private int size;
 	private Color color;
-	private Bitmap bitmap; //This should always be loaded from the child class
+	//private Bitmap bitmap; //This should always be loaded from the child class
 	Ball(int x, int y, int size, Color color)
 	{
 		position = new BVector(x,y);
@@ -30,7 +30,7 @@ public abstract class Ball
     		return(BVector.sub(other.position,position).magSq() <= ((size+other.size)/2)*((size+other.size)/2));  
   	}
 
-	void update()
+	public void update()
 	{
 		position.add(velocity);
 		checkBoundaryCollition();
@@ -38,12 +38,12 @@ public abstract class Ball
 	
 	void checkBoundaryCollition() //I'm broken still :[
 	{
-		if (position.x > width-size/2)
-			position.x = width-size/2;
+		if (position.x > Assets.WIDTH-size/2)
+			position.x = Assets.WIDTH-size/2;
 		if (position.x <size/2)
 			position.x = size/2;
-		if (position.y > height-size/2)
-			position.y = height-size/2;
+		if (position.y > Assets.HEIGHT-size/2)
+			position.y = Assets.HEIGHT-size/2;
 		if (position.y< size/2)
 			position.y =size/2;
 	}
