@@ -25,7 +25,7 @@ public class PowerUpController
 			if (player.checkCollision(dormantPowerUps.get(i)))
 			{
 				System.out.println("Player: " + player.position + " " + player.size);
-				System.out.println("PowerUp: " + dormantPowerUps.get(i).position + " " + dormantPowerUps.get(i).size);
+				System.out.println("PowerUp: " + dormantPowerUps.get(i).getPosition() + " " + dormantPowerUps.get(i).size);
 TopLoop: switch(dormantPowerUps.get(i).type)
 	 {
 		 //Note: Currently All PowerUps are generic will be more indepth Later
@@ -44,7 +44,7 @@ TopLoop: switch(dormantPowerUps.get(i).type)
 				 playerMods.add(new SpikeMod(player.position));
 			 break;
 		 case 1: //Explosion
-			 activePowerUps.add(new Explosion(dormantPowerUps.get(i).position));
+			 activePowerUps.add(new Explosion(dormantPowerUps.get(i).getPosition()));
 			 break;
 		 case 2: //Shield
 			 for (int x = 0; x < playerMods.size(); x++)
@@ -82,7 +82,7 @@ TopLoop: switch(dormantPowerUps.get(i).type)
 		{
 			dormantPowerUps.add(new PowerUp());
 			spawnCounter = new Timer(Assets.random(0, (60/((System.currentTimeMillis()/1000)+9)+3)));
-			System.out.println("new PowerUp spawned at point " + dormantPowerUps.get(dormantPowerUps.size()-1).position);
+			System.out.println("new PowerUp spawned at point " + dormantPowerUps.get(dormantPowerUps.size()-1).getPosition());
 			System.out.println("Next spawn in " + spawnCounter.life + " seconds");
 		}
 	}
