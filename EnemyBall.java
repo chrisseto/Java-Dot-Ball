@@ -1,6 +1,8 @@
 package com.ChrisSeto.JavaDotBall
 
-class EnemyBall extends Ball
+public class EnemyBall extends Ball
 {
-	
+	public EnemyBall()
+	{
+	}
 }
