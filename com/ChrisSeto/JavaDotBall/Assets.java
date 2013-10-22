@@ -11,6 +11,8 @@ public class Assets {
 	public static final int PLAYERSIZE = 20;
 	public static final int ENEMYSIZE = 12;
 	public static final int POWERUPSIZE = 19;
+	public static final int SPIKERADIUS = 30;
+	public static final int SHIELDRADIUS = 25;
 	public static double random(double lower, double upper)
 	{
 		return new Random().nextDouble() * upper + lower;
