@@ -5,24 +5,24 @@ import java.awt.Color;
 public abstract class Ball
 {
 	private BVector position, velocity;
-	private int size;
+	private double size;
 	private Color color;
 	//private Bitmap bitmap; //This should always be loaded from the child class
-	Ball(int x, int y, int size, Color color)
+	Ball(double x, double y, double size, Color color)
 	{
 		position = new BVector(x,y);
 		this.size = size;
 		this.color = color;
 	}
 	
-	public int getX()
+	public double getX()
 	{
-		return (int) position.x;
+		return position.x;
 	}
 	
-	public int getY()
+	public double getY()
 	{
-		return (int) position.y;
+		return position.y;
 	}
 
 	public boolean checkCollision(Ball other)
