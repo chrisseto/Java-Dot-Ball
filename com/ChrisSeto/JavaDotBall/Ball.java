@@ -27,7 +27,7 @@ public abstract class Ball
 
 	public boolean checkCollision(Ball other)
   	{
-    		return(BVector.sub(other.position,position).magSq() <= ((size+other.size)/2)*((size+other.size)/2));  
+    		return(BVector.sub(other.position,position).magsq() <= ((size+other.size)/2)*((size+other.size)/2));  
   	}
 
 	public void update()

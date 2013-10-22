@@ -58,4 +58,13 @@ public class BVector
 		this.x/= mag;
 		this.y/= mag;
 	}
+	public BVector get()
+	{
+		return new BVector(this.x,this.y);
+	}
+	public static BVector sub(BVector position, BVector position2) {
+		BVector BV = position.get();
+		BV.sub(position2);
+		return BV;
+	}
 }
