@@ -5,35 +5,24 @@ import java.math.*;
 
 public class EnemyController {
 	private ArrayList<EnemyBall> reds;
-	private ArrayList<DeadEnemyBall> dead;
-	private int stage, redSize;
 	Timer spawnNext;
 
 	EnemyController() {
 		reds = new ArrayList<EnemyBall>();
-		dead = new ArrayList<DeadEnemyBall>();
 		spawnNext = new Timer(1);
 	}
 
 	void draw() {
 		for (int i = 0; i < reds.size(); i++)
 			reds.get(i).draw();
-		for (int i = 0; i < dead.size(); i++)
-			dead.get(i).draw();
 	}
 
 	void update(BVector player) {
 		for (int i = 0; i < reds.size(); i++)
 			reds.get(i).update(player, reds);
-		for (int i = 0; i < dead.size(); i++) {
-			dead.get(i).update();
-			if (dead.get(i).done)
-				dead.remove(i);
-		}
 	}
 
 	void destroyBall(int i) {
-		dead.add(new DeadEnemyBall(reds.get(i).position));
 		reds.remove(i);
 	}
 
