@@ -17,3 +17,8 @@ Class Hierarchy for a future game
 
 ### Class EnemyBall extends Ball
 * Flocking algorithm
+
+
+### Fininshed Class
+* Timer.java
+* BVector.java (maybe, might require more static methods)
