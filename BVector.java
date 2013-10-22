@@ -1,4 +1,4 @@
-package com.ChrisSeto.BallDotJava
+package com.ChrisSeto.JavaDotBall
 
 //BVector is meant to be a clone of processings PVector
 //Might need to change ints to floats....
